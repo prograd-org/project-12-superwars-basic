@@ -23,7 +23,16 @@ const PLAYERS = [
 
 // initialize players with image and strength
 const initPlayers = (players) => {
-    let detailedPlayers = [];
+    let detailedPlayers = [
+        {
+            name: "Spiderman",
+            strength: getRandomStrength(),
+            image: "./images/super-1.png",
+            type: "hero|villain"
+        },
+
+
+    ];
     // Create players using for loop
     // Type your code here
 
@@ -32,6 +41,7 @@ const initPlayers = (players) => {
 
 // getting random strength
 const getRandomStrength = () => {
+    return Math.random(100)
     // Return a random integer (0,100]
     // Note: You can use Math.random() and Math.ceil()
 }
