@@ -33,12 +33,12 @@ const initPlayers = (players) => {
             image:`images/super-${i}.png`
         }
         if(i%2!=0){
-            detailedObject.type = `hero`;
+            detailedObject.type = `hero`;//creating alternate type as heroes
         }
         else{
             detailedObject.type = `villain`;
         }
-        detailedPlayers[detailedPlayers.length] = detailedObject;
+        detailedPlayers[detailedPlayers.length] = detailedObject;//appending player to list
         i++;
     }
     // Type your code here
@@ -50,7 +50,7 @@ const getRandomStrength = () => {
     // Return a random integer (0,100]
     min = Math.ceil(0);
     max = Math.floor(100);
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min)) + min; //generating a random strength
     // Note: You can use Math.random() and Math.ceil()
 }
 
@@ -58,11 +58,8 @@ const buildPlayers = (players, type1) => {
     let fragment = '';
     let div1 , pic ,div2 ,div3;
     for(let player of players){
-        // if(player.type == type1){  
-        // fragment += `<div class="player"><img src="${player.image}" alt=""><div class="name">${player.name}</div><div class="strength">${player.strength}</div></div>`;
-        // fragment = fragment.replace(/\s/g, "");
-        // }  
-        
+        if(player.type == type1){//creating template only if type matches
+        //creating required HTML template
             div1 = document.createElement('div');
             div1.className = 'player';
             pic = document.createElement('img');
@@ -77,15 +74,14 @@ const buildPlayers = (players, type1) => {
             div1.appendChild(pic);
             div1.appendChild(div2);
             div1.appendChild(div3);
-        if(player.type == type1){
+        //converting HTML object into string format
             fragment = fragment + div1.outerHTML;
-            console.log(fragment);
         }
     }
 
-//     // Loop through players and accumulate HTML template
-//     // depending of type of player(hero|villain)
-//     // Type your code here
+    // Loop through players and accumulate HTML template
+    // depending of type of player(hero|villain)
+    // Type your code here
 
     return fragment;
 }
