@@ -51,7 +51,7 @@ Dustin and Lucus wants to create players.In `initPlayers()`, loop through passed
 * `image` can be sequential i.e. "images/super-"+(i+1)+".png"  
 * `type` of player can alternating between hero and villain or your own logic
 * It should _return an array_ of player objects.
-    ```javascript
+    ```javascript 
     [
         {
             name:"Super Man",
