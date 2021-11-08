@@ -67,7 +67,7 @@ const buildPlayers = (players, type) => {
     }
     return fragment;
 }
-// Display players in HTML
+// Display players in HTML..
 const viewPlayers = (players) => {
 
     document.getElementById('heroes').innerHTML = buildPlayers(players, 'hero');
