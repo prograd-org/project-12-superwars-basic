@@ -39,7 +39,7 @@ const initPlayers = (players) => {
 }
 
 function herovillian(n) {
-    if (n % 3 == 0) {
+    if (n % 2 == 0) {
         return "hero";
     } else {
         return "villain";
